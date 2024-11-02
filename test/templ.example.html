@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>
+    <button class="btn btn-sm btn-default btn-address">New Address</button>
+</p>
+
+{% for(var i=0, l=addrlist.length; i<l; i++) { %}
+<hr>
+{%= _("Edit") %}
+{%= addr_list[i].address_type %}
+
+{% if(addr_list[i].is_primary_address) { %}
+{%= __("Primary") %}
+{% } %}
+
+{% if(addr_list[i].is_shipping_address) { %}
+{%= __("Shipping") %}
+{% } %}
+
+{%= addr_list[i].display %}
+{% } %}
+
+{% if(!addrlist.length) { %}
+{%= _("No address added yet.") %}
+{% } %}
+
+</body>
+</html>
