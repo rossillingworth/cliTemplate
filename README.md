@@ -1,16 +1,8 @@
 
 <br />
 <div align="center">
-
 <h3 align="center">CLI Templating</h3>
-
 </div>
-
-
-
-
-
-
 
 ## About The Project
 
@@ -21,7 +13,7 @@ Input Data can be a single object, or an array.
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
+This is an example of how you may give instructions on setting up your project locally.  
 To get a local copy up and running follow these simple example steps.
 
 
