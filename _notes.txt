@@ -12,6 +12,4 @@ https://nodejs.org/docs/latest/api/util.html#utilparseargsconfig
 
 # to run
 npm install -g
-tmpl --t=test\sales_demo_output.html --d="test\gpt_prompt_for_product_details__products1_results.json"
-tmpl --debug --t=test\sales_demo_output.html --d="test\gpt_prompt_for_product_details__products1_results.json" --p="products"
-tmpl --debug --t=test\sales_demo_output.html --d="test\gpt_prompt_for_product_details__products1_results.json" --p="products" --e=".html"
+tmpl --debug --t=test\template.html --d="test\results.json" --o="output" --p="products" --e=".html"

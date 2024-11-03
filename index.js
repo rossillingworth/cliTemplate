@@ -30,6 +30,8 @@ const getArgs = () =>
 
 function readOrExit(path,argName,msg){
   try{
+    args.debug && console.log("CWD:",process.cwd());
+    args.debug && console.log("LOADING:",path);
     if(!path) throw Error(`Argument missing: ${argName} path/to/file`);
     return fs.readFileSync(path,"utf8");
   }catch(err){
@@ -56,6 +58,11 @@ const compiledTemplate = tmpl(template);
 var data = JSON.parse(readOrExit(args.d,"--d","Bad PATH to data file"));
 if(args.p){
   data = data[args.p]
+}
+
+if(args.debug) {
+  console.log("Exiting as debug active.")
+  process.exit(0);
 }
 
 if(Array.isArray(data)){
